@@ -103,7 +103,7 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '陈锦龙'
     },
     algolia: {
       applicationID: '',
@@ -193,7 +193,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            Home
+            首页
           </a>
         </li>
       
@@ -203,7 +203,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            About
+            关于
           </a>
         </li>
       
@@ -213,7 +213,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -223,7 +223,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            Categories
+            分类
           </a>
         </li>
       
@@ -233,7 +233,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            Archives
+            归档
           </a>
         </li>
       
@@ -277,7 +277,7 @@
         
           <div class="tag-cloud">
             <div class="tag-cloud-title">
-                No tags
+                暂无标签
             </div>
             <div class="tag-cloud-tags">
               
@@ -300,6 +300,16 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
 
   
 
@@ -345,7 +355,7 @@
                 <a href="/archives">
               
                   <span class="site-state-item-count">10</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
@@ -356,7 +366,7 @@
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
                   <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">categories</span>
+                  <span class="site-state-item-name">分类</span>
                 </a>
               </div>
             
@@ -420,7 +430,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
@@ -428,7 +438,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
@@ -573,6 +583,26 @@
 
   
 
+    
+      <script id="dsq-count-scr" src="https://chen.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/tags/index.html';
+          this.page.identifier = 'tags/index.html';
+          this.page.title = 'tags';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://chen.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
 
 
 
@@ -585,10 +615,6 @@
   
 
 
-
-
-
-  
 
 
 
