@@ -1748,7 +1748,7 @@ pre .javascript .function {
   moz-transition: 1.4s all;
   ms-transition: 1.4s all;
   transition: 1.4s all;
-/* end */
+/*   end */
 }
 .site-author-name {
   margin: 0;
@@ -1841,7 +1841,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #95beff;
+  background: #0fff61;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2694,7 +2694,6 @@ pre .javascript .function {
   box-sizing: border-box;
   padding: 40px;
   width: 700px;
-  background: #fff;
   min-height: 700px;
   box-shadow: initial;
   border-radius: initial;
@@ -3011,7 +3010,6 @@ pre .javascript .function {
 }
 #lv-container {
   border-radius: 20px;
-  padding: 30px 60px 30px 60px;
   background: rgba(255,255,255,0.8) none repeat scroll !important;
 }
 .content {
