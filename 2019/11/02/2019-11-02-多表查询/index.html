@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="ssm," />
 
 
 
@@ -79,15 +79,19 @@
 
 
 
-<meta name="description" content="学无止境">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;tags&#x2F;index.html">
+<meta name="description" content="mybatis对于处理简单的单表查询一般使用resultType就可以解决，但对于多表查询往往都需要使用resultMap进行详细的描述，告诉mybatis如何去封装。 12345678910111213141516&amp;lt;!--封装方式一 --&amp;gt;    &amp;lt;resultMap id=&quot;UserWithDetailMap&quot; type=&quot;com.pojo.UserWithDetail&quot;&amp;g">
+<meta name="keywords" content="ssm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="多表查询">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;02&#x2F;2019-11-02-%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2&#x2F;index.html">
 <meta property="og:site_name" content="SnowyLChen">
-<meta property="og:description" content="学无止境">
+<meta property="og:description" content="mybatis对于处理简单的单表查询一般使用resultType就可以解决，但对于多表查询往往都需要使用resultMap进行详细的描述，告诉mybatis如何去封装。 12345678910111213141516&amp;lt;!--封装方式一 --&amp;gt;    &amp;lt;resultMap id=&quot;UserWithDetailMap&quot; type=&quot;com.pojo.UserWithDetail&quot;&amp;g">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-02T12:10:20.441Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;02&#x2F;2019-11-02-%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2&#x2F;%5Cassets%5Cimages%5C%E5%88%86%E6%AD%A5%E6%9F%A5%E8%AF%A2.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;02&#x2F;2019-11-02-%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2&#x2F;%5Cassets%5Cimages%5C%E5%88%86%E6%AD%A5%E6%9F%A5%E8%AF%A22.png">
+<meta property="og:updated_time" content="2019-11-02T15:31:23.820Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;02&#x2F;2019-11-02-%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2&#x2F;%5Cassets%5Cimages%5C%E5%88%86%E6%AD%A5%E6%9F%A5%E8%AF%A2.png">
 
 
 
@@ -117,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/11/02/2019-11-02-多表查询/"/>
 
 
 
 
 
-  <title>tags | SnowyLChen</title>
+  <title>多表查询 | SnowyLChen</title>
   
 
 
@@ -258,40 +262,223 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/02/2019-11-02-%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SnowyLChen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SnowyLChen">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 2 个标签
+          <h1 class="post-title" itemprop="name headline">多表查询</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-02T21:06:02+08:00">
+                2019-11-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Mybatis/" itemprop="url" rel="index">
+                    <span itemprop="name">Mybatis</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/11/02/2019-11-02-%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/" class="leancloud_visitors" data-flag-title="多表查询">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  315 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1 分钟
+                </span>
+              
             </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/Hexo/" style="font-size: 12px; color: #ccc">Hexo</a> <a href="/tags/ssm/" style="font-size: 30px; color: #111">ssm</a>
-            </div>
-          </div>
-        
-      </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>mybatis对于处理简单的单表查询一般使用resultType就可以解决，但对于多表查询往往都需要使用resultMap进行详细的描述，告诉mybatis如何去封装。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--封装方式一 --&gt;</span><br><span class="line">    &lt;resultMap id=<span class="string">"UserWithDetailMap"</span> type=<span class="string">"com.pojo.UserWithDetail"</span>&gt;</span><br><span class="line">        &lt;id property=<span class="string">"u_id"</span> column=<span class="string">"uid"</span>/&gt;</span><br><span class="line">        &lt;result property=<span class="string">"phone"</span> column=<span class="string">"phone"</span>/&gt;</span><br><span class="line">        &lt;result property=<span class="string">"password"</span> column=<span class="string">"password"</span>/&gt;</span><br><span class="line">        &lt;result property=<span class="string">"create_date"</span> column=<span class="string">"create_date"</span>/&gt;</span><br><span class="line">        &lt;result property=<span class="string">"status"</span> column=<span class="string">"status"</span>/&gt;</span><br><span class="line">        &lt;!--</span><br><span class="line">            持有UserDetail如何封装</span><br><span class="line">        --&gt;</span><br><span class="line">        &lt;association property=<span class="string">"user_detail"</span> javaType=<span class="string">"com.pojo.User_detail"</span>&gt;</span><br><span class="line">            &lt;id property=<span class="string">"ud_id"</span> column=<span class="string">"udid"</span>/&gt;</span><br><span class="line">            &lt;result property=<span class="string">"address"</span> column=<span class="string">"address"</span>/&gt;</span><br><span class="line">            &lt;result property=<span class="string">"c_id"</span> column=<span class="string">"c_id"</span>/&gt;</span><br><span class="line">        &lt;/association&gt;</span><br><span class="line">    &lt;/resultMap&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--封装方式二--&gt;</span><br><span class="line"></span><br><span class="line">   &lt;resultMap id=<span class="string">"UserWithDetailMap2"</span> type=<span class="string">"com.pojo.UserWithDetail"</span>&gt;</span><br><span class="line">       &lt;id property=<span class="string">"u_id"</span> column=<span class="string">"uid"</span>/&gt;</span><br><span class="line">       &lt;result property=<span class="string">"phone"</span> column=<span class="string">"phone"</span>/&gt;</span><br><span class="line">       &lt;result property=<span class="string">"password"</span> column=<span class="string">"password"</span>/&gt;</span><br><span class="line">       &lt;result property=<span class="string">"create_date"</span> column=<span class="string">"create_date"</span>/&gt;</span><br><span class="line">       &lt;result property=<span class="string">"status"</span> column=<span class="string">"status"</span>/&gt;</span><br><span class="line">       &lt;result property=<span class="string">"user_detail.ud_id"</span> column=<span class="string">"udid"</span>/&gt;</span><br><span class="line">       &lt;result property=<span class="string">"user_detail.address"</span> column=<span class="string">"address"</span>/&gt;</span><br><span class="line">       &lt;result property=<span class="string">"user_detail.c_id"</span> column=<span class="string">"c_id"</span>/&gt;</span><br><span class="line"></span><br><span class="line">   &lt;/resultMap&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--封装方式三</span><br><span class="line">	分步查询，通过调用其他接口的sql语句来查询。</span><br><span class="line">--&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="%5Cassets%5Cimages%5C%E5%88%86%E6%AD%A5%E6%9F%A5%E8%AF%A2.png" alt="1558345604601"></p>
+<p><img src="%5Cassets%5Cimages%5C%E5%88%86%E6%AD%A5%E6%9F%A5%E8%AF%A22.png" alt="1558345663560"></p>
+<p>查询语句（多表查询）</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;select id=<span class="string">"searchID"</span> resultMap=<span class="string">"UserWithDetailMap"</span>&gt;</span><br><span class="line">        select t1.`u_id` as uid,t1.`phone`,t1.`password`,t1.`create_date`,t1.`status`</span><br><span class="line">        ,t2.`ud_id` as udid,t2.`address`,t2.`c_id`</span><br><span class="line">        from user t1,user_detail t2</span><br><span class="line">        &lt;where&gt;</span><br><span class="line">             t1.u_id=t2.ud_id</span><br><span class="line">        &lt;/where&gt;</span><br><span class="line">        and t1.u_id=#&#123;u_id&#125;;</span><br><span class="line"></span><br><span class="line">    &lt;/select&gt;</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ssm/" rel="tag"># ssm</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/02/2019-11-02-%E5%8A%A8%E6%80%81SQL/" rel="next" title="动态SQL">
+                <i class="fa fa-chevron-left"></i> 动态SQL
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/02/2019-11-02-log4j.properties%E9%85%8D%E7%BD%AE/" rel="prev" title="2019-11-02-log4j.properties配置">
+                2019-11-02-log4j.properties配置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
