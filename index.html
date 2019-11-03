@@ -270,6 +270,568 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/03/Spring/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SnowyLChen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SnowyLChen">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/03/Spring/" itemprop="url">Spring</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-03T12:24:37+08:00">
+                2019-11-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Spring/" itemprop="url" rel="index">
+                    <span itemprop="name">Spring</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/11/03/Spring/" class="leancloud_visitors" data-flag-title="Spring">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.9k 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  8 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="一、步骤："><a href="#一、步骤：" class="headerlink" title="一、步骤："></a>一、步骤：</h1><h2 id="1-添加依赖："><a href="#1-添加依赖：" class="headerlink" title="1.添加依赖："></a>1.添加依赖：</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">  &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;spring-context&lt;/artifactId&gt;</span><br><span class="line">  &lt;version&gt;5.1.6.RELEASE&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-配置文件"><a href="#2-配置文件" class="headerlink" title="2.配置文件"></a>2.配置文件</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span>?&gt;</span><br><span class="line">&lt;beans xmlns=<span class="string">"http://www.springframework.org/schema/beans"</span></span><br><span class="line">       xmlns:xsi=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span><br><span class="line">       xsi:schemaLocation=<span class="string">"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"</span>&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;!--</span><br><span class="line">        class:写java类的全限定类名，它通过全类名然后使用反射的技术进行创建的</span><br><span class="line">        id：ID就是给这个对象在整个应用程序上下文中取个名字以便区分</span><br><span class="line">        --&gt;</span><br><span class="line"></span><br><span class="line">    &lt;bean <span class="class"><span class="keyword">class</span></span>=<span class="string">"spring.com.pojo.Gril"</span> id=<span class="string">"gril"</span>&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/bean&gt;</span><br><span class="line">&lt;/beans&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-类"><a href="#3-类" class="headerlink" title="3.类"></a>3.类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> spring.com.pojo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Gril</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span>  String sex;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getSex</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> sex;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setSex</span><span class="params">(String sex)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.sex = sex;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//子类</span></span><br><span class="line"><span class="keyword">package</span> spring.com.pojo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PrettyGril</span> <span class="keyword">extends</span> <span class="title">Gril</span></span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"美丽女孩"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-测试类"><a href="#4-测试类" class="headerlink" title="4.测试类"></a>4.测试类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> spring;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.junit.Test;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"><span class="keyword">import</span> spring.com.pojo.Gril;</span><br><span class="line"> <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">m1</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//首先获取上下文对象，spring里面声明的对象都需要通过上下文获取</span></span><br><span class="line">        ApplicationContext apc=<span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"applicationContext.xml"</span>);</span><br><span class="line">        <span class="comment">//通过Gril获取获取girl</span></span><br><span class="line">        Gril g = (Gril) apc.getBean(<span class="string">"gril"</span>);</span><br><span class="line">        System.out.println(g);</span><br><span class="line">        ((PrettyGril)g).show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-结果"><a href="#5-结果" class="headerlink" title="5.结果"></a>5.结果</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">spring.com.pojo.PrettyGril@<span class="number">458</span>c1321</span><br><span class="line">美丽女孩</span><br><span class="line"></span><br><span class="line">Process finished with exit cod0</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-总结"><a href="#6-总结" class="headerlink" title="6.总结"></a>6.总结</h2><p>在测试类中不需要变代码，只需将配置文件中</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean class="spring.com.pojo.Gril" id="gril"&gt;&lt;/bean&gt;</span><br><span class="line">变成</span><br><span class="line">&lt;bean class="spring.com.pojo.PrettyGril" id="gril"&gt;&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="二、值的注入"><a href="#二、值的注入" class="headerlink" title="二、值的注入"></a>二、值的注入</h1><h2 id="1-值的注入"><a href="#1-值的注入" class="headerlink" title="1.值的注入"></a>1.值的注入</h2><ul>
+<li>通过setter（）方法注入<ul>
+<li>必须其字段有对应的setter方法才可以完成</li>
+<li>通过property子节点完成注入</li>
+</ul>
+</li>
+<li>通过构造器注入。使用<constructor-arg name="" value=""></constructor-arg></li>
+</ul>
+<h2 id="2-bean元素探讨"><a href="#2-bean元素探讨" class="headerlink" title="2.bean元素探讨"></a>2.bean元素探讨</h2><p>属性探讨</p>
+<ul>
+<li><p>abstract ： 该bean无法被实例化（用来被继承）</p>
+</li>
+<li><p>parent ： 指明其父类是谁，将会继承父bean中的所有内容，通过id进行指引。（配合abstract使用）</p>
+</li>
+<li><p><img src="images/post/1558773594444.png" alt="1558773594444"></p>
+</li>
+<li><p>destroy-method : 指定这个bean在最后被销毁的时候一定执行的方法。适合于清理型工作。触发条件是这个bean确实被销毁才会发生。</p>
+<ul>
+<li>容器close（）会触发</li>
+<li>refresh（） 会触发</li>
+<li>destroy（）也可以触发（不推荐使用，已out）</li>
+</ul>
+</li>
+<li><p>init-method : 指定bean 的初始化方法，适合一些准备型工作。</p>
+</li>
+<li><p>name : 别名；（可以写多个）如：</p>
+</li>
+<li><p><img src="images/post/1558774472848.png" alt="1558774472848"></p>
+<ul>
+<li>注：Spring 默认为单例</li>
+</ul>
+</li>
+<li><p>scope ： 指定范围。默认为 singleton</p>
+<ul>
+<li>singleton ：单例 ,==Spring上下文==当中，只有一个实例</li>
+<li>prototype ：原型  要一个就新给一个。</li>
+</ul>
+</li>
+<li><p>lazy-init : </p>
+<ul>
+<li>true : 当Spring读取配置文件的是时候不会初始化bean，当我们使用的时候才会去初始化（默认构造函数）<ul>
+<li>直接初始化<ul>
+<li>会使得应该程序启动的慢一点，内存占用大一点。</li>
+<li>当我们使用bean的时候会快一点。</li>
+</ul>
+</li>
+<li>延迟初始化<ul>
+<li>会使得应该程序启动的快一点，内存占用小一点。</li>
+<li>当我们使用bean的时候会慢一点。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>depends-on ： 依赖的bean，如果一个bean的使用严重依赖于另一个bean的准备的话，就可以配置</p>
+<p>depends-on。</p>
+</li>
+</ul>
+<p>对于非字面值可以描述的值的注入问题</p>
+<p><img src="images/post/1558776108541.png" alt="1558776108541"></p>
+<p>通过ref指向另外一个bean的ID</p>
+<p>关于在Spring的配置文件当中单独定义我们的别名。通过allas标签完成即可</p>
+<p>Spring配置文件里面的bean是可以互相引用的（前提是被上下文所扫描到的）</p>
+<hr>
+<p>3.Spring 各种值类型的注入方式</p>
+<ul>
+<li>数组</li>
+<li>list</li>
+<li>set</li>
+<li>map</li>
+</ul>
+<p>如果其对应值是简单是字面值，直接写property赋值就ok，如果是一个其他的类，则使用内部bean的方式注入</p>
+<h2 id="4-自动注入"><a href="#4-自动注入" class="headerlink" title="4.自动注入"></a>4.自动注入</h2><ul>
+<li>byType：按照数据类型注入</li>
+<li>byName：按照bean对应的pojo里面属性的名字来进行匹配</li>
+<li>byConstructor<ul>
+<li>优先按照类型去匹配，如果匹配到一个，那么直接注入；</li>
+<li>如果匹配的不止一个 ，按照名字注入；</li>
+<li>如果一个都找不到。注入失败。</li>
+</ul>
+</li>
+<li>default：默认；</li>
+<li>no ：不注入；</li>
+</ul>
+<p><img src="images/post/1558779500102.png" alt="1558779500102"></p>
+<hr>
+<h1 id="三、常用注解"><a href="#三、常用注解" class="headerlink" title="三、常用注解"></a>三、常用注解</h1><ul>
+<li>component</li>
+<li>controller(SpringMVC)</li>
+<li>Service（业务层）</li>
+<li>repository(dao层)</li>
+</ul>
+<hr>
+<h1 id="四、零散的知识点"><a href="#四、零散的知识点" class="headerlink" title="四、零散的知识点"></a>四、零散的知识点</h1><ul>
+<li><p>如何引入外部的文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;context:property-placeholder location=<span class="string">"classpath:beans.xml"</span>/&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如何通过表达式引用外部properties的键值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;property name=<span class="string">"url"</span> value=<span class="string">"$&#123;url&#125;"</span>/&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>从一个配置文件引入多个Spring配置文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">import</span> resource=<span class="string">"classpath:spring-*.xml"</span>/&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置扫描包</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--这个扫描方式是扫描所有子包--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">"com.ProvideService"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--除了Repository这个包--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">context:exclude-filter</span> <span class="attr">type</span>=<span class="string">"annotation"</span> <span class="attr">expression</span>=<span class="string">"org.springframework.stereotype.Repository"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">context:component-scan</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<hr>
+<h1 id="五、SpringAOP（面向切面编程）"><a href="#五、SpringAOP（面向切面编程）" class="headerlink" title="五、SpringAOP（面向切面编程）"></a>五、SpringAOP（面向切面编程）</h1><h2 id="1-xml版"><a href="#1-xml版" class="headerlink" title="1.xml版"></a>1.xml版</h2><p>需要导入AspectJ和AspectJ Weaver的jar包</p>
+<p>如果不是Spring容器所管理的bean，那么织入行为是无效的。</p>
+<p><img src="images/post/1558865480806.png" alt="1558865480806"></p>
+<p><img src="images/post/1558865553339.png" alt="1558865553339"></p>
+<p><img src="images/post/1558945717792.png" alt="1558945717792"></p>
+<h2 id="2-注解版"><a href="#2-注解版" class="headerlink" title="2.注解版"></a>2.注解版</h2><h3 id="1-在applicationContext-xml中"><a href="#1-在applicationContext-xml中" class="headerlink" title="(1) 在applicationContext.xml中"></a>(1) 在applicationContext.xml中</h3><p>​    设置自动代理（&lt; aop:aspectj-autoproxy /&gt;）</p>
+<p>​    扫描包（&lt;context:component-scan base-package=”com” /&gt;）</p>
+<h3 id="2-在advice中"><a href="#2-在advice中" class="headerlink" title="(2) 在advice中"></a>(2) 在advice中</h3><h4 id="1-gt-BeforeAdvice"><a href="#1-gt-BeforeAdvice" class="headerlink" title="1&gt; BeforeAdvice"></a>1&gt; BeforeAdvice</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">package com.advice;</span><br><span class="line"></span><br><span class="line">import org.aspectj.lang.annotation.Aspect;</span><br><span class="line">import org.aspectj.lang.annotation.Before;</span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line">@Aspect</span><br><span class="line">@Component  //注册成为一个组件</span><br><span class="line">public class BeforeAdvice &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    @Before("execution(* com.ProvideService.BeforeAdviceAOP.BeforeMethod())")</span><br><span class="line">    public void before()&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println("我在方法之前执行");</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-gt-AfterAdvice"><a href="#2-gt-AfterAdvice" class="headerlink" title="2&gt; AfterAdvice"></a>2&gt; AfterAdvice</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">package com.advice;</span><br><span class="line"></span><br><span class="line">import org.aspectj.lang.annotation.After;</span><br><span class="line">import org.aspectj.lang.annotation.Aspect;</span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line">@Aspect</span><br><span class="line">@Component</span><br><span class="line">public class AfterAdvice &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    @After("execution(* com.ProvideService.AfterAdviceAOP.AfterMethod())")</span><br><span class="line">    public  void  After()&#123;</span><br><span class="line">        System.out.println("我在方法之后执行");</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-gt-AfterReturnning"><a href="#3-gt-AfterReturnning" class="headerlink" title="3&gt; AfterReturnning"></a>3&gt; AfterReturnning</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">package com.advice;</span><br><span class="line"></span><br><span class="line">import org.aspectj.lang.annotation.AfterReturning;</span><br><span class="line">import org.aspectj.lang.annotation.Aspect;</span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line">@Aspect</span><br><span class="line">@Component</span><br><span class="line">public class AfterReturningAdvice &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    @AfterReturning(value ="execution(* com.ProvideService.AfterReturningAdviceAOP.afterReturningMethod())",returning = "returning")</span><br><span class="line">    public void afterReturning(String returning)&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        System.out.println("返回值之后。。。。"+returning);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-gt-AfterThrowing"><a href="#4-gt-AfterThrowing" class="headerlink" title="4&gt; AfterThrowing"></a>4&gt; AfterThrowing</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">package com.advice;</span><br><span class="line"></span><br><span class="line">import org.aspectj.lang.JoinPoint;</span><br><span class="line">import org.aspectj.lang.annotation.AfterThrowing;</span><br><span class="line">import org.aspectj.lang.annotation.Aspect;</span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line">@Aspect</span><br><span class="line">@Component</span><br><span class="line">public class AfterthrowingAdvice &#123;</span><br><span class="line"></span><br><span class="line">    @AfterThrowing(value = "execution(* com.ProvideService.AfterthrowingAdviceAOP.afterthrowMethod())",throwing = "throwingMsg")</span><br><span class="line">    public void afterthrowing(JoinPoint joinPoint,String throwingMsg)&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println("异常之后....."+joinPoint.getSignature().getName());</span><br><span class="line">        System.out.println("异常信息："+throwingMsg);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-在Service中"><a href="#3-在Service中" class="headerlink" title="(3) 在Service中"></a>(3) 在Service中</h3><h4 id="1-gt-BeforeAdviceAOP"><a href="#1-gt-BeforeAdviceAOP" class="headerlink" title="1&gt; BeforeAdviceAOP"></a>1&gt; BeforeAdviceAOP</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">package com.ProvideService;</span><br><span class="line"></span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">public class BeforeAdviceAOP &#123;</span><br><span class="line"></span><br><span class="line">    public void BeforeMethod()&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println("BeforeMethod AOP");</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-gt-AfterAdviceAOP"><a href="#2-gt-AfterAdviceAOP" class="headerlink" title="2&gt; AfterAdviceAOP"></a>2&gt; AfterAdviceAOP</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">package com.ProvideService;</span><br><span class="line"></span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">public class AfterAdviceAOP &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public void AfterMethod()&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println("AfterMethod AOP");</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-gt-AfterReturningAdviceAOP"><a href="#3-gt-AfterReturningAdviceAOP" class="headerlink" title="3&gt; AfterReturningAdviceAOP"></a>3&gt; AfterReturningAdviceAOP</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">package com.ProvideService;</span><br><span class="line"></span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">public class AfterReturningAdviceAOP &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public String  afterReturningMethod()&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println("afterReturningMethod AOP");</span><br><span class="line">        return "我是afterReturningMethod方法";</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-gt-AfterthrowingAdviceAOP"><a href="#4-gt-AfterthrowingAdviceAOP" class="headerlink" title="4&gt; AfterthrowingAdviceAOP"></a>4&gt; AfterthrowingAdviceAOP</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">package com.ProvideService;</span><br><span class="line"></span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">public class AfterthrowingAdviceAOP &#123;</span><br><span class="line"></span><br><span class="line">    public void afterthrowMethod()&#123;</span><br><span class="line">        System.out.println("我是异常");</span><br><span class="line">        throw new RuntimeException("我有错误，出现异常");</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-测试类-1"><a href="#4-测试类-1" class="headerlink" title="(4) 测试类"></a>(4) 测试类</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> spring;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.ProvideService.*;</span><br><span class="line"><span class="keyword">import</span> org.junit.Test;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"><span class="keyword">import</span> spring.com.pojo.Gril;</span><br><span class="line"><span class="keyword">import</span> spring.com.pojo.PrettyGril;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test2</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">m1</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//首先获取上下文对象，spring里面声明的对象都需要通过上下文获取</span></span><br><span class="line">        ApplicationContext apc=<span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"applicationContext.xml"</span>);</span><br><span class="line">        BeforeAdviceAOP beforeAdviceAOP = apc.getBean(<span class="string">"beforeAdviceAOP"</span>, BeforeAdviceAOP<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        beforeAdviceAOP.BeforeMethod();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">m2</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//首先获取上下文对象，spring里面声明的对象都需要通过上下文获取</span></span><br><span class="line">        ApplicationContext apc=<span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"applicationContext.xml"</span>);</span><br><span class="line">        AfterAdviceAOP afterAdviceAOP = apc.getBean(<span class="string">"afterAdviceAOP"</span>, AfterAdviceAOP<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        afterAdviceAOP.AfterMethod();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">m3</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//首先获取上下文对象，spring里面声明的对象都需要通过上下文获取</span></span><br><span class="line">        ApplicationContext apc=<span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"applicationContext.xml"</span>);</span><br><span class="line">        AfterReturningAdviceAOP afterReturningAdviceAOP = apc.getBean(<span class="string">"afterReturningAdviceAOP"</span>, AfterReturningAdviceAOP<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        afterReturningAdviceAOP.afterReturningMethod();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">m4</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//首先获取上下文对象，spring里面声明的对象都需要通过上下文获取</span></span><br><span class="line">        ApplicationContext apc=<span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"applicationContext.xml"</span>);</span><br><span class="line">        AfterthrowingAdviceAOP afterthrowingAdviceAOP = apc.getBean(<span class="string">"afterthrowingAdviceAOP"</span>, AfterthrowingAdviceAOP<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        afterthrowingAdviceAOP.afterthrowMethod();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="注：-SpringAOP顺序"><a href="#注：-SpringAOP顺序" class="headerlink" title="注：(SpringAOP顺序)"></a>注：(SpringAOP顺序)</h2><ul>
+<li>设置自动代理</li>
+<li>扫描包（通过context）</li>
+<li>写建议（Advice）<ul>
+<li>@Aspect</li>
+<li>@Component</li>
+</ul>
+</li>
+<li>写要切的类及其要切的方法（AdviceAOP）<ul>
+<li>@Component</li>
+</ul>
+</li>
+<li>测试即可。</li>
+<li>想要同类型建议按顺序执行<ul>
+<li>写多个建议，每个建议中写@Order(num)注解</li>
+<li>执行顺序<ul>
+<li>Before(从1-2-3顺序执行)<ul>
+<li>@Order(1)</li>
+<li>@Order(2)</li>
+<li>@Order(3)</li>
+</ul>
+</li>
+<li>After(从3-2-1顺序执行)<ul>
+<li>@Order(3)</li>
+<li>@Order(2)</li>
+<li>@Order(1)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/03/%E7%BC%93%E5%AD%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SnowyLChen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SnowyLChen">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/03/%E7%BC%93%E5%AD%98/" itemprop="url">二级缓存</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-03T12:24:23+08:00">
+                2019-11-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/cache/" itemprop="url" rel="index">
+                    <span itemprop="name">cache</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/11/03/%E7%BC%93%E5%AD%98/" class="leancloud_visitors" data-flag-title="二级缓存">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  378 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="二级缓存（cache）"><a href="#二级缓存（cache）" class="headerlink" title="二级缓存（cache）"></a>二级缓存（cache）</h2><p>如何开启二级缓存</p>
+<p>测试类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t2</span><span class="params">()</span></span>&#123;</span><br><span class="line">    SqlSession ss=mybatisUtil.getSession();</span><br><span class="line">    SqlSession ss2=mybatisUtil.getSession();</span><br><span class="line">    PeopleMapper mapper = ss.getMapper(PeopleMapper<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">    PeopleMapper mapper2 = ss2.getMapper(PeopleMapper<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">    mapper.search(<span class="number">1</span>);</span><br><span class="line">    ss.close();</span><br><span class="line">    mapper2.search(<span class="number">1</span>);</span><br><span class="line">    ss2.close()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>mybatis.xml配置中写：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;settings&gt;</span><br><span class="line"> &lt;!--下划线风格转化为驼峰风格--&gt;</span><br><span class="line">    &lt;!--开启二级缓存--&gt;</span><br><span class="line">    &lt;setting name=<span class="string">"cacheEnabled"</span> value=<span class="string">"true"</span>/&gt;</span><br><span class="line">&lt;/settings&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在mapper.xml中写：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;cache</span><br><span class="line">   	  <span class="comment">/**LRU – 最近最少使用：移除最长时间不被使用的对象。</span></span><br><span class="line"><span class="comment">	  *FIFO – 先进先出：按对象进入缓存的顺序来移除它们。</span></span><br><span class="line"><span class="comment">	  *SOFT – 软引用：基于垃圾回收器状态和软引用规则移除对象。</span></span><br><span class="line"><span class="comment">	  *WEAK – 弱引用：更积极地基于垃圾收集器状态和弱引用规则移除对象。默认的清除策略是 LRU。*/</span></span><br><span class="line">          	eviction=<span class="string">"FIFO"</span></span><br><span class="line">    	  <span class="comment">//flushInterval（刷新间隔）属性可以被设置为任意的正整数，设置的值应该是一个以毫秒为单位的合理时间量。 默认情况是不设置，也就是没有刷新间隔，缓存仅仅会在调用语句时刷新。</span></span><br><span class="line">    		flushInterval=<span class="string">"60000"</span></span><br><span class="line">    	  <span class="comment">//size（引用数目）属性可以被设置为任意正整数，要注意欲缓存对象的大小和运行环境中可用的内存资源。默认值是 1024。</span></span><br><span class="line">           size=<span class="string">"512"</span></span><br><span class="line">           readOnly=<span class="string">"true"</span>/&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示</strong> 二级缓存是事务性的。这意味着，当 SqlSession 完成并提交时，或是完成并回滚，但没有执行 flushCache=true 的 insert/delete/update 语句时，缓存会获得更新</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/02/%E9%80%9A%E8%BF%87Hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -421,7 +983,7 @@
 <h3 id="source"><a href="#source" class="headerlink" title="source"></a>source</h3><p>资源文件夹是存放用户资源的地方。除 <code>_posts</code> 文件夹之外，开头命名为 <code>_</code> (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 <code>public</code> 文件夹，而其他文件会被拷贝过去。</p>
 <h3 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h3><p><a href="https://hexo.io/zh-cn/docs/themes" target="_blank" rel="noopener">主题</a> 文件夹。Hexo 会根据主题来生成静态页面。</p>
 <h2 id="安装-NexT"><a href="#安装-NexT" class="headerlink" title="安装 NexT"></a>安装 NexT</h2><p>Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至站点目录的 <code>themes</code> 目录下， 然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下。</p>
-<p><img src="images/Next.png" alt="安装Next"></p>
+<p><img src="images/post/Next.png" alt="安装Next"></p>
 <h3 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h3><p>与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 <strong>站点配置文件</strong>， 找到 <code>theme</code> 字段，并将其值更改为 <code>next</code>。</p>
 <p>启用 NexT 主题</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
@@ -967,8 +1529,8 @@
 
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--封装方式三</span><br><span class="line">	分步查询，通过调用其他接口的sql语句来查询。</span><br><span class="line">--&gt;</span><br></pre></td></tr></table></figure>
 
-<p><img src="%5Cassets%5Cimages%5C%E5%88%86%E6%AD%A5%E6%9F%A5%E8%AF%A2.png" alt="1558345604601"></p>
-<p><img src="%5Cassets%5Cimages%5C%E5%88%86%E6%AD%A5%E6%9F%A5%E8%AF%A22.png" alt="1558345663560"></p>
+<p><img src="images/post/%E5%88%86%E6%AD%A5%E6%9F%A5%E8%AF%A2.png" alt="1558345604601"></p>
+<p><img src="images/post/%E5%88%86%E6%AD%A5%E6%9F%A5%E8%AF%A22.png" alt="1558345663560"></p>
 <p>查询语句（多表查询）</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;select id=<span class="string">"searchID"</span> resultMap=<span class="string">"UserWithDetailMap"</span>&gt;</span><br><span class="line">        select t1.`u_id` as uid,t1.`phone`,t1.`password`,t1.`create_date`,t1.`status`</span><br><span class="line">        ,t2.`ud_id` as udid,t2.`address`,t2.`c_id`</span><br><span class="line">        from user t1,user_detail t2</span><br><span class="line">        &lt;where&gt;</span><br><span class="line">             t1.u_id=t2.ud_id</span><br><span class="line">        &lt;/where&gt;</span><br><span class="line">        and t1.u_id=#&#123;u_id&#125;;</span><br><span class="line"></span><br><span class="line">    &lt;/select&gt;</span><br></pre></td></tr></table></figure>
 
@@ -1285,8 +1847,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Mybatis/" itemprop="url" rel="index">
-                    <span itemprop="name">Mybatis</span>
+                  <a href="/categories/Web/" itemprop="url" rel="index">
+                    <span itemprop="name">Web</span>
                   </a>
                 </span>
 
@@ -1895,8 +2457,8 @@
 
 <p>​    3.自行在web.xml定义映射规则</p>
 <h3 id="6-gt-各类注解"><a href="#6-gt-各类注解" class="headerlink" title="6&gt; 各类注解"></a>6&gt; 各类注解</h3><h4 id="PathVariable"><a href="#PathVariable" class="headerlink" title="@PathVariable"></a>@PathVariable</h4><p>restful风格</p>
-<p><img src="%5Cassets%5Cimages%5C1559491974245.png" alt="1559491974245"></p>
-<p><img src="%5Cassets%5Cimages%5C1559492027278.png" alt="1559492027278"></p>
+<p><img src="images/post/1559491974245.png" alt="1559491974245"></p>
+<p><img src="images/post/1559492027278.png" alt="1559492027278"></p>
 <h4 id="ModelAttribute"><a href="#ModelAttribute" class="headerlink" title="@ModelAttribute"></a>@ModelAttribute</h4><p>​    在当前controller里的任意方法之前执行</p>
 <ul>
 <li>方式1：用在方法上</li>
@@ -2225,404 +2787,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/02/2019-11-02-MybatisUtils/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SnowyLChen">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SnowyLChen">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/02/2019-11-02-MybatisUtils/" itemprop="url">获取SQLSession工具类</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-02T14:06:02+08:00">
-                2019-11-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Mybatis/" itemprop="url" rel="index">
-                    <span itemprop="name">Mybatis</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2019/11/02/2019-11-02-MybatisUtils/" class="leancloud_visitors" data-flag-title="获取SQLSession工具类">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  240 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="MybatisUtils"><a href="#MybatisUtils" class="headerlink" title="MybatisUtils"></a>MybatisUtils</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.util;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.io.Resources;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.session.SqlSession;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.session.SqlSessionFactory;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.session.SqlSessionFactoryBuilder;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">mybatisUtil</span> </span>&#123;</span><br><span class="line"><span class="keyword">private</span>  <span class="keyword">static</span> SqlSessionFactory sqlSessionFactory;</span><br><span class="line"><span class="keyword">static</span> &#123;</span><br><span class="line">    String resources=<span class="string">"mybatis.cgf.xml"</span>;</span><br><span class="line">    InputStream in =<span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="comment">//读取resource.xml文件</span></span><br><span class="line">        in= Resources.getResourceAsStream(resources);</span><br><span class="line">        <span class="comment">//匿名对象使用构造</span></span><br><span class="line">        sqlSessionFactory=<span class="keyword">new</span> SqlSessionFactoryBuilder().build(in);</span><br><span class="line">    &#125;<span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(in!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                in.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> SqlSession <span class="title">getSession</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span>  sqlSessionFactory.openSession();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="mybatis-cgf-xml"><a href="#mybatis-cgf-xml" class="headerlink" title="mybatis.cgf.xml"></a>mybatis.cgf.xml</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">environments</span> <span class="attr">default</span>=<span class="string">"dev"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">environment</span> <span class="attr">id</span>=<span class="string">"dev"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">transactionManager</span> <span class="attr">type</span>=<span class="string">"JDBC"</span>&gt;</span><span class="tag">&lt;/<span class="name">transactionManager</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dataSource</span> <span class="attr">type</span>=<span class="string">"UNPOOLED"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"url"</span> <span class="attr">value</span>=<span class="string">"$&#123;url&#125;"</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"driver"</span> <span class="attr">value</span>=<span class="string">"$&#123;driver&#125;"</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">value</span>=<span class="string">"$&#123;username&#125;"</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">value</span>=<span class="string">"$&#123;password&#125;"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dataSource</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">environment</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">environments</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mappers</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mapper</span> <span class="attr">resource</span>=<span class="string">"com/mapper/PeopleMapper.xml"</span>&gt;</span><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mappers</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/02/2019-11-02-%E5%A6%82%E4%BD%95%E5%9C%A8%E4%BD%BF%E7%94%A8GitHub%20Page/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SnowyLChen">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SnowyLChen">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/02/2019-11-02-%E5%A6%82%E4%BD%95%E5%9C%A8%E4%BD%BF%E7%94%A8GitHub%20Page/" itemprop="url">搭建博客和ruby的安装</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-02T12:06:02+08:00">
-                2019-11-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/jekyll/" itemprop="url" rel="index">
-                    <span itemprop="name">jekyll</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2019/11/02/2019-11-02-%E5%A6%82%E4%BD%95%E5%9C%A8%E4%BD%BF%E7%94%A8GitHub%20Page/" class="leancloud_visitors" data-flag-title="搭建博客和ruby的安装">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  168 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="使用GitHub-Page搭建博客"><a href="#使用GitHub-Page搭建博客" class="headerlink" title="使用GitHub Page搭建博客"></a>使用GitHub Page搭建博客</h3><ul>
-<li>参考:<a href="https://www.cnblogs.com/sqchen/p/10757927.html" target="_blank" rel="noopener">https://www.cnblogs.com/sqchen/p/10757927.html</a></li>
-</ul>
-<h3 id="ruby"><a href="#ruby" class="headerlink" title="ruby:"></a>ruby:</h3><ul>
-<li><p>更新ruby版本<code>gem update --system</code></p>
-</li>
-<li><p>安装jekyll <code>gem install jekyll</code></p>
-</li>
-<li><p>清华大学源：<br><a href="https://mirror.tuna.tsinghua.edu.cn/help/msys2/" target="_blank" rel="noopener">https://mirror.tuna.tsinghua.edu.cn/help/msys2/</a></p>
-</li>
-<li><p>各种错误参考</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. https://www.jianshu.com/p/58e2c5ea3103</span><br><span class="line">2. https://www.bbsmax.com/A/1O5EpbXyJ7</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>启动Jekyll服务 </p>
-<p>bundle exec jekyll serve，自动生成yml，启动Jekyll服务时，可能会遇到如下错误：</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Conversion error: Jekyll::Converters::Scss encountered an error</span><br><span class="line"> 	<span class="keyword">while</span> converting <span class="string">'css/main.scss'</span>:Invalid GBK character <span class="string">"\xE2"</span> on line 10</span><br><span class="line">jekyll 3.4.0 | Error:  Invalid GBK character <span class="string">"\xE2"</span> on line 10</span><br></pre></td></tr></table></figure>
-
-<p>​     很明显，是编码问题，找到<code>ruby目录\lib\ruby\gems\2.3.0\gems\sass-3.7.2\lib\sass.rb</code>文件，在<code>require后</code>追加：<code>Encoding.default_external = Encoding.find(&#39;utf-8&#39;)</code>即可。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&lt;i class=&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+  </nav>
+
 
 
           </div>
@@ -2670,7 +2841,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2681,7 +2852,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2692,7 +2863,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

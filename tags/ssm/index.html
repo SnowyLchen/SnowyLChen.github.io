@@ -302,62 +302,6 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2019/11/02/2019-11-02-%E5%8A%A8%E6%80%81SQL/" itemprop="url">
-              
-                <span itemprop="name">动态SQL</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-02T19:06:02+08:00"
-              content="2019-11-02" >
-          11-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/11/02/2019-11-02-web.xml/" itemprop="url">
-              
-                <span itemprop="name">web.xml的模板</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-02T18:06:02+08:00"
-              content="2019-11-02" >
-          11-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
             <a class="post-title-link" href="/2019/11/02/2019-11-02-ssm%E6%95%B4%E5%90%88/" itemprop="url">
               
                 <span itemprop="name">SSM整合开发</span>
@@ -397,90 +341,6 @@
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
               datetime="2019-11-02T16:06:02+08:00"
-              content="2019-11-02" >
-          11-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/11/02/2019-11-02-springmvc.xml/" itemprop="url">
-              
-                <span itemprop="name">Springmvc.xml的编写</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-02T15:06:02+08:00"
-              content="2019-11-02" >
-          11-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/11/02/2019-11-02-MybatisUtils/" itemprop="url">
-              
-                <span itemprop="name">获取SQLSession工具类</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-02T14:06:02+08:00"
-              content="2019-11-02" >
-          11-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/11/02/2019-11-02-%E5%A6%82%E4%BD%95%E5%9C%A8%E4%BD%BF%E7%94%A8GitHub%20Page/" itemprop="url">
-              
-                <span itemprop="name">搭建博客和ruby的安装</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-02T12:06:02+08:00"
               content="2019-11-02" >
           11-02
         </time>
@@ -546,7 +406,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -557,7 +417,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -568,7 +428,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -900,6 +760,47 @@
                 $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
               },
               error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+<script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>
+tion(newcounter, error) {
                 console.log('Failed to create');
               }
             });

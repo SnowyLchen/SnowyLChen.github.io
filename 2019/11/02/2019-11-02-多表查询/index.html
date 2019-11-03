@@ -87,11 +87,11 @@
 <meta property="og:site_name" content="SnowyLChen">
 <meta property="og:description" content="mybatis对于处理简单的单表查询一般使用resultType就可以解决，但对于多表查询往往都需要使用resultMap进行详细的描述，告诉mybatis如何去封装。 12345678910111213141516&amp;lt;!--封装方式一 --&amp;gt;    &amp;lt;resultMap id=&quot;UserWithDetailMap&quot; type=&quot;com.pojo.UserWithDetail&quot;&amp;g">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;02&#x2F;2019-11-02-%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2&#x2F;%5Cassets%5Cimages%5C%E5%88%86%E6%AD%A5%E6%9F%A5%E8%AF%A2.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;02&#x2F;2019-11-02-%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2&#x2F;%5Cassets%5Cimages%5C%E5%88%86%E6%AD%A5%E6%9F%A5%E8%AF%A22.png">
-<meta property="og:updated_time" content="2019-11-02T15:31:23.820Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;02&#x2F;2019-11-02-%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2&#x2F;images&#x2F;post&#x2F;%E5%88%86%E6%AD%A5%E6%9F%A5%E8%AF%A2.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;02&#x2F;2019-11-02-%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2&#x2F;images&#x2F;post&#x2F;%E5%88%86%E6%AD%A5%E6%9F%A5%E8%AF%A22.png">
+<meta property="og:updated_time" content="2019-11-03T04:21:23.650Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;02&#x2F;2019-11-02-%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2&#x2F;%5Cassets%5Cimages%5C%E5%88%86%E6%AD%A5%E6%9F%A5%E8%AF%A2.png">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;02&#x2F;2019-11-02-%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2&#x2F;images&#x2F;post&#x2F;%E5%88%86%E6%AD%A5%E6%9F%A5%E8%AF%A2.png">
 
 
 
@@ -412,8 +412,8 @@
 
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--封装方式三</span><br><span class="line">	分步查询，通过调用其他接口的sql语句来查询。</span><br><span class="line">--&gt;</span><br></pre></td></tr></table></figure>
 
-<p><img src="%5Cassets%5Cimages%5C%E5%88%86%E6%AD%A5%E6%9F%A5%E8%AF%A2.png" alt="1558345604601"></p>
-<p><img src="%5Cassets%5Cimages%5C%E5%88%86%E6%AD%A5%E6%9F%A5%E8%AF%A22.png" alt="1558345663560"></p>
+<p><img src="images/post/%E5%88%86%E6%AD%A5%E6%9F%A5%E8%AF%A2.png" alt="1558345604601"></p>
+<p><img src="images/post/%E5%88%86%E6%AD%A5%E6%9F%A5%E8%AF%A22.png" alt="1558345663560"></p>
 <p>查询语句（多表查询）</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;select id=<span class="string">"searchID"</span> resultMap=<span class="string">"UserWithDetailMap"</span>&gt;</span><br><span class="line">        select t1.`u_id` as uid,t1.`phone`,t1.`password`,t1.`create_date`,t1.`status`</span><br><span class="line">        ,t2.`ud_id` as udid,t2.`address`,t2.`c_id`</span><br><span class="line">        from user t1,user_detail t2</span><br><span class="line">        &lt;where&gt;</span><br><span class="line">             t1.u_id=t2.ud_id</span><br><span class="line">        &lt;/where&gt;</span><br><span class="line">        and t1.u_id=#&#123;u_id&#125;;</span><br><span class="line"></span><br><span class="line">    &lt;/select&gt;</span><br></pre></td></tr></table></figure>
 
@@ -536,7 +536,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -547,7 +547,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -558,7 +558,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
