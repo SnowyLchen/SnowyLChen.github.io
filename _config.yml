@@ -4,7 +4,7 @@
 
 # Site
 title: SnowyLChen
-subtitle: '人总是四处逃避，却永远无法回避自己'
+subtitle: '人总是四处逃避<br>却永远无法回避自己'
 description: '学无止境'
 keywords:
 author: SnowyLChen
@@ -95,4 +95,8 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/SnowyLChen/SnowyLChen.github.io.git
+  branch: master
+bash sitemap: 
+    path: baidusitemap.xml,sitemap.xml

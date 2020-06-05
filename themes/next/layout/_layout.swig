@@ -88,8 +88,7 @@
   {% include '_third-party/mathjax.swig' %}
   {% include '_third-party/scroll-cookie.swig' %}
   {% include '_third-party/exturl.swig' %}
-  {% if theme.leancloud_visitors.enable %}
-  	 {% include '_scripts/lean-analytics.swig' %}
-  {%  endif %}
+
+<script type="text/javascript" src="/js/src/love.js"></script>
 </body>
 </html>

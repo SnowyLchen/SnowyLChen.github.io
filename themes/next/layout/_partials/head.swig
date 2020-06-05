@@ -1,4 +1,6 @@
 <meta charset="UTF-8"/>
+<meta name="baidu-site-verification" content="YktYBy37Ri" />
+<meta name="google-site-verification" content="mlV3vl5Fvcta9aRw2mn2Lve5y1M-ffS9FRIoTb-CsFo" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="{{ theme.android_chrome_color }}">
