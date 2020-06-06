@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta name="baidu-site-verification" content="YktYBy37Ri" />
+<meta name="google-site-verification" content="mlV3vl5Fvcta9aRw2mn2Lve5y1M-ffS9FRIoTb-CsFo" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="ssm,Spring," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="一、步骤：1.添加依赖：12345&amp;lt;dependency&amp;gt;  &amp;lt;groupId&amp;gt;org.springframework&amp;lt;&#x2F;groupId&amp;gt;  &amp;lt;artifactId&amp;gt;spring-context&amp;lt;&#x2F;artifactId&amp;gt;  &amp;lt;version&amp;gt;5.1.6.RELEASE&amp;lt;&#x2F;version&amp;gt;&amp;lt;&#x2F;dependenc">
+<meta name="keywords" content="ssm,Spring">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;Spring&#x2F;index.html">
+<meta property="og:site_name" content="SnowyLChen">
+<meta property="og:description" content="一、步骤：1.添加依赖：12345&amp;lt;dependency&amp;gt;  &amp;lt;groupId&amp;gt;org.springframework&amp;lt;&#x2F;groupId&amp;gt;  &amp;lt;artifactId&amp;gt;spring-context&amp;lt;&#x2F;artifactId&amp;gt;  &amp;lt;version&amp;gt;5.1.6.RELEASE&amp;lt;&#x2F;version&amp;gt;&amp;lt;&#x2F;dependenc">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;post&#x2F;1558773594444.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;post&#x2F;1558774472848.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;post&#x2F;1558776108541.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;post&#x2F;1558779500102.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;post&#x2F;1558865480806.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;post&#x2F;1558865553339.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;post&#x2F;1558945717792.png">
+<meta property="og:updated_time" content="2019-11-03T05:52:28.655Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;post&#x2F;1558773594444.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '陈锦龙'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/11/03/Spring/"/>
+
+
+
+
+
+  <title>Spring | SnowyLChen</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?92f472b4dedfe6b616a805f649eb7d24";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">SnowyLChen</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">人总是四处逃避<br>却永远无法回避自己</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/03/Spring/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SnowyLChen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SnowyLChen">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Spring</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-03T12:24:37+08:00">
+                2019-11-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Spring/" itemprop="url" rel="index">
+                    <span itemprop="name">Spring</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/11/03/Spring/" class="leancloud_visitors" data-flag-title="Spring">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.9k 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  8 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="一、步骤："><a href="#一、步骤：" class="headerlink" title="一、步骤："></a>一、步骤：</h1><h2 id="1-添加依赖："><a href="#1-添加依赖：" class="headerlink" title="1.添加依赖："></a>1.添加依赖：</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">  &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;spring-context&lt;/artifactId&gt;</span><br><span class="line">  &lt;version&gt;5.1.6.RELEASE&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-配置文件"><a href="#2-配置文件" class="headerlink" title="2.配置文件"></a>2.配置文件</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span>?&gt;</span><br><span class="line">&lt;beans xmlns=<span class="string">"http://www.springframework.org/schema/beans"</span></span><br><span class="line">       xmlns:xsi=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span><br><span class="line">       xsi:schemaLocation=<span class="string">"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"</span>&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;!--</span><br><span class="line">        class:写java类的全限定类名，它通过全类名然后使用反射的技术进行创建的</span><br><span class="line">        id：ID就是给这个对象在整个应用程序上下文中取个名字以便区分</span><br><span class="line">        --&gt;</span><br><span class="line"></span><br><span class="line">    &lt;bean <span class="class"><span class="keyword">class</span></span>=<span class="string">"spring.com.pojo.Gril"</span> id=<span class="string">"gril"</span>&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/bean&gt;</span><br><span class="line">&lt;/beans&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-类"><a href="#3-类" class="headerlink" title="3.类"></a>3.类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> spring.com.pojo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Gril</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span>  String sex;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getSex</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> sex;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setSex</span><span class="params">(String sex)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.sex = sex;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//子类</span></span><br><span class="line"><span class="keyword">package</span> spring.com.pojo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PrettyGril</span> <span class="keyword">extends</span> <span class="title">Gril</span></span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"美丽女孩"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-测试类"><a href="#4-测试类" class="headerlink" title="4.测试类"></a>4.测试类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> spring;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.junit.Test;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"><span class="keyword">import</span> spring.com.pojo.Gril;</span><br><span class="line"> <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">m1</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//首先获取上下文对象，spring里面声明的对象都需要通过上下文获取</span></span><br><span class="line">        ApplicationContext apc=<span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"applicationContext.xml"</span>);</span><br><span class="line">        <span class="comment">//通过Gril获取获取girl</span></span><br><span class="line">        Gril g = (Gril) apc.getBean(<span class="string">"gril"</span>);</span><br><span class="line">        System.out.println(g);</span><br><span class="line">        ((PrettyGril)g).show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-结果"><a href="#5-结果" class="headerlink" title="5.结果"></a>5.结果</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">spring.com.pojo.PrettyGril@<span class="number">458</span>c1321</span><br><span class="line">美丽女孩</span><br><span class="line"></span><br><span class="line">Process finished with exit cod0</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-总结"><a href="#6-总结" class="headerlink" title="6.总结"></a>6.总结</h2><p>在测试类中不需要变代码，只需将配置文件中</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean class="spring.com.pojo.Gril" id="gril"&gt;&lt;/bean&gt;</span><br><span class="line">变成</span><br><span class="line">&lt;bean class="spring.com.pojo.PrettyGril" id="gril"&gt;&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="二、值的注入"><a href="#二、值的注入" class="headerlink" title="二、值的注入"></a>二、值的注入</h1><h2 id="1-值的注入"><a href="#1-值的注入" class="headerlink" title="1.值的注入"></a>1.值的注入</h2><ul>
+<li>通过setter（）方法注入<ul>
+<li>必须其字段有对应的setter方法才可以完成</li>
+<li>通过property子节点完成注入</li>
+</ul>
+</li>
+<li>通过构造器注入。使用<constructor-arg name="" value=""></constructor-arg></li>
+</ul>
+<h2 id="2-bean元素探讨"><a href="#2-bean元素探讨" class="headerlink" title="2.bean元素探讨"></a>2.bean元素探讨</h2><p>属性探讨</p>
+<ul>
+<li><p>abstract ： 该bean无法被实例化（用来被继承）</p>
+</li>
+<li><p>parent ： 指明其父类是谁，将会继承父bean中的所有内容，通过id进行指引。（配合abstract使用）</p>
+</li>
+<li><p><img src="/images/post/1558773594444.png" alt="1558773594444"></p>
+</li>
+<li><p>destroy-method : 指定这个bean在最后被销毁的时候一定执行的方法。适合于清理型工作。触发条件是这个bean确实被销毁才会发生。</p>
+<ul>
+<li>容器close（）会触发</li>
+<li>refresh（） 会触发</li>
+<li>destroy（）也可以触发（不推荐使用，已out）</li>
+</ul>
+</li>
+<li><p>init-method : 指定bean 的初始化方法，适合一些准备型工作。</p>
+</li>
+<li><p>name : 别名；（可以写多个）如：</p>
+</li>
+<li><p><img src="/images/post/1558774472848.png" alt="1558774472848"></p>
+<ul>
+<li>注：Spring 默认为单例</li>
+</ul>
+</li>
+<li><p>scope ： 指定范围。默认为 singleton</p>
+<ul>
+<li>singleton ：单例 ,==Spring上下文==当中，只有一个实例</li>
+<li>prototype ：原型  要一个就新给一个。</li>
+</ul>
+</li>
+<li><p>lazy-init : </p>
+<ul>
+<li>true : 当Spring读取配置文件的是时候不会初始化bean，当我们使用的时候才会去初始化（默认构造函数）<ul>
+<li>直接初始化<ul>
+<li>会使得应该程序启动的慢一点，内存占用大一点。</li>
+<li>当我们使用bean的时候会快一点。</li>
+</ul>
+</li>
+<li>延迟初始化<ul>
+<li>会使得应该程序启动的快一点，内存占用小一点。</li>
+<li>当我们使用bean的时候会慢一点。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>depends-on ： 依赖的bean，如果一个bean的使用严重依赖于另一个bean的准备的话，就可以配置</p>
+<p>depends-on。</p>
+</li>
+</ul>
+<p>对于非字面值可以描述的值的注入问题</p>
+<p><img src="/images/post/1558776108541.png" alt="1558776108541"></p>
+<p>通过ref指向另外一个bean的ID</p>
+<p>关于在Spring的配置文件当中单独定义我们的别名。通过allas标签完成即可</p>
+<p>Spring配置文件里面的bean是可以互相引用的（前提是被上下文所扫描到的）</p>
+<hr>
+<p>3.Spring 各种值类型的注入方式</p>
+<ul>
+<li>数组</li>
+<li>list</li>
+<li>set</li>
+<li>map</li>
+</ul>
+<p>如果其对应值是简单是字面值，直接写property赋值就ok，如果是一个其他的类，则使用内部bean的方式注入</p>
+<h2 id="4-自动注入"><a href="#4-自动注入" class="headerlink" title="4.自动注入"></a>4.自动注入</h2><ul>
+<li>byType：按照数据类型注入</li>
+<li>byName：按照bean对应的pojo里面属性的名字来进行匹配</li>
+<li>byConstructor<ul>
+<li>优先按照类型去匹配，如果匹配到一个，那么直接注入；</li>
+<li>如果匹配的不止一个 ，按照名字注入；</li>
+<li>如果一个都找不到。注入失败。</li>
+</ul>
+</li>
+<li>default：默认；</li>
+<li>no ：不注入；</li>
+</ul>
+<p><img src="/images/post/1558779500102.png" alt="1558779500102"></p>
+<hr>
+<h1 id="三、常用注解"><a href="#三、常用注解" class="headerlink" title="三、常用注解"></a>三、常用注解</h1><ul>
+<li>component</li>
+<li>controller(SpringMVC)</li>
+<li>Service（业务层）</li>
+<li>repository(dao层)</li>
+</ul>
+<hr>
+<h1 id="四、零散的知识点"><a href="#四、零散的知识点" class="headerlink" title="四、零散的知识点"></a>四、零散的知识点</h1><ul>
+<li><p>如何引入外部的文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;context:property-placeholder location=<span class="string">"classpath:beans.xml"</span>/&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如何通过表达式引用外部properties的键值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;property name=<span class="string">"url"</span> value=<span class="string">"$&#123;url&#125;"</span>/&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>从一个配置文件引入多个Spring配置文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">import</span> resource=<span class="string">"classpath:spring-*.xml"</span>/&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置扫描包</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--这个扫描方式是扫描所有子包--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">"com.ProvideService"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--除了Repository这个包--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">context:exclude-filter</span> <span class="attr">type</span>=<span class="string">"annotation"</span> <span class="attr">expression</span>=<span class="string">"org.springframework.stereotype.Repository"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">context:component-scan</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<hr>
+<h1 id="五、SpringAOP（面向切面编程）"><a href="#五、SpringAOP（面向切面编程）" class="headerlink" title="五、SpringAOP（面向切面编程）"></a>五、SpringAOP（面向切面编程）</h1><h2 id="1-xml版"><a href="#1-xml版" class="headerlink" title="1.xml版"></a>1.xml版</h2><p>需要导入AspectJ和AspectJ Weaver的jar包</p>
+<p>如果不是Spring容器所管理的bean，那么织入行为是无效的。</p>
+<p><img src="/images/post/1558865480806.png" alt="1558865480806"></p>
+<p><img src="/images/post/1558865553339.png" alt="1558865553339"></p>
+<p><img src="/images/post/1558945717792.png" alt="1558945717792"></p>
+<h2 id="2-注解版"><a href="#2-注解版" class="headerlink" title="2.注解版"></a>2.注解版</h2><h3 id="1-在applicationContext-xml中"><a href="#1-在applicationContext-xml中" class="headerlink" title="(1) 在applicationContext.xml中"></a>(1) 在applicationContext.xml中</h3><p>​    设置自动代理（&lt; aop:aspectj-autoproxy /&gt;）</p>
+<p>​    扫描包（&lt;context:component-scan base-package=”com” /&gt;）</p>
+<h3 id="2-在advice中"><a href="#2-在advice中" class="headerlink" title="(2) 在advice中"></a>(2) 在advice中</h3><h4 id="1-gt-BeforeAdvice"><a href="#1-gt-BeforeAdvice" class="headerlink" title="1&gt; BeforeAdvice"></a>1&gt; BeforeAdvice</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">package com.advice;</span><br><span class="line"></span><br><span class="line">import org.aspectj.lang.annotation.Aspect;</span><br><span class="line">import org.aspectj.lang.annotation.Before;</span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line">@Aspect</span><br><span class="line">@Component  //注册成为一个组件</span><br><span class="line">public class BeforeAdvice &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    @Before("execution(* com.ProvideService.BeforeAdviceAOP.BeforeMethod())")</span><br><span class="line">    public void before()&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println("我在方法之前执行");</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-gt-AfterAdvice"><a href="#2-gt-AfterAdvice" class="headerlink" title="2&gt; AfterAdvice"></a>2&gt; AfterAdvice</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">package com.advice;</span><br><span class="line"></span><br><span class="line">import org.aspectj.lang.annotation.After;</span><br><span class="line">import org.aspectj.lang.annotation.Aspect;</span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line">@Aspect</span><br><span class="line">@Component</span><br><span class="line">public class AfterAdvice &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    @After("execution(* com.ProvideService.AfterAdviceAOP.AfterMethod())")</span><br><span class="line">    public  void  After()&#123;</span><br><span class="line">        System.out.println("我在方法之后执行");</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-gt-AfterReturnning"><a href="#3-gt-AfterReturnning" class="headerlink" title="3&gt; AfterReturnning"></a>3&gt; AfterReturnning</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">package com.advice;</span><br><span class="line"></span><br><span class="line">import org.aspectj.lang.annotation.AfterReturning;</span><br><span class="line">import org.aspectj.lang.annotation.Aspect;</span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line">@Aspect</span><br><span class="line">@Component</span><br><span class="line">public class AfterReturningAdvice &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    @AfterReturning(value ="execution(* com.ProvideService.AfterReturningAdviceAOP.afterReturningMethod())",returning = "returning")</span><br><span class="line">    public void afterReturning(String returning)&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        System.out.println("返回值之后。。。。"+returning);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-gt-AfterThrowing"><a href="#4-gt-AfterThrowing" class="headerlink" title="4&gt; AfterThrowing"></a>4&gt; AfterThrowing</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">package com.advice;</span><br><span class="line"></span><br><span class="line">import org.aspectj.lang.JoinPoint;</span><br><span class="line">import org.aspectj.lang.annotation.AfterThrowing;</span><br><span class="line">import org.aspectj.lang.annotation.Aspect;</span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line">@Aspect</span><br><span class="line">@Component</span><br><span class="line">public class AfterthrowingAdvice &#123;</span><br><span class="line"></span><br><span class="line">    @AfterThrowing(value = "execution(* com.ProvideService.AfterthrowingAdviceAOP.afterthrowMethod())",throwing = "throwingMsg")</span><br><span class="line">    public void afterthrowing(JoinPoint joinPoint,String throwingMsg)&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println("异常之后....."+joinPoint.getSignature().getName());</span><br><span class="line">        System.out.println("异常信息："+throwingMsg);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-在Service中"><a href="#3-在Service中" class="headerlink" title="(3) 在Service中"></a>(3) 在Service中</h3><h4 id="1-gt-BeforeAdviceAOP"><a href="#1-gt-BeforeAdviceAOP" class="headerlink" title="1&gt; BeforeAdviceAOP"></a>1&gt; BeforeAdviceAOP</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">package com.ProvideService;</span><br><span class="line"></span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">public class BeforeAdviceAOP &#123;</span><br><span class="line"></span><br><span class="line">    public void BeforeMethod()&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println("BeforeMethod AOP");</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-gt-AfterAdviceAOP"><a href="#2-gt-AfterAdviceAOP" class="headerlink" title="2&gt; AfterAdviceAOP"></a>2&gt; AfterAdviceAOP</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">package com.ProvideService;</span><br><span class="line"></span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">public class AfterAdviceAOP &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public void AfterMethod()&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println("AfterMethod AOP");</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-gt-AfterReturningAdviceAOP"><a href="#3-gt-AfterReturningAdviceAOP" class="headerlink" title="3&gt; AfterReturningAdviceAOP"></a>3&gt; AfterReturningAdviceAOP</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">package com.ProvideService;</span><br><span class="line"></span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">public class AfterReturningAdviceAOP &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public String  afterReturningMethod()&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println("afterReturningMethod AOP");</span><br><span class="line">        return "我是afterReturningMethod方法";</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-gt-AfterthrowingAdviceAOP"><a href="#4-gt-AfterthrowingAdviceAOP" class="headerlink" title="4&gt; AfterthrowingAdviceAOP"></a>4&gt; AfterthrowingAdviceAOP</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">package com.ProvideService;</span><br><span class="line"></span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">public class AfterthrowingAdviceAOP &#123;</span><br><span class="line"></span><br><span class="line">    public void afterthrowMethod()&#123;</span><br><span class="line">        System.out.println("我是异常");</span><br><span class="line">        throw new RuntimeException("我有错误，出现异常");</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-测试类-1"><a href="#4-测试类-1" class="headerlink" title="(4) 测试类"></a>(4) 测试类</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> spring;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.ProvideService.*;</span><br><span class="line"><span class="keyword">import</span> org.junit.Test;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"><span class="keyword">import</span> spring.com.pojo.Gril;</span><br><span class="line"><span class="keyword">import</span> spring.com.pojo.PrettyGril;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test2</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">m1</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//首先获取上下文对象，spring里面声明的对象都需要通过上下文获取</span></span><br><span class="line">        ApplicationContext apc=<span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"applicationContext.xml"</span>);</span><br><span class="line">        BeforeAdviceAOP beforeAdviceAOP = apc.getBean(<span class="string">"beforeAdviceAOP"</span>, BeforeAdviceAOP<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        beforeAdviceAOP.BeforeMethod();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">m2</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//首先获取上下文对象，spring里面声明的对象都需要通过上下文获取</span></span><br><span class="line">        ApplicationContext apc=<span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"applicationContext.xml"</span>);</span><br><span class="line">        AfterAdviceAOP afterAdviceAOP = apc.getBean(<span class="string">"afterAdviceAOP"</span>, AfterAdviceAOP<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        afterAdviceAOP.AfterMethod();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">m3</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//首先获取上下文对象，spring里面声明的对象都需要通过上下文获取</span></span><br><span class="line">        ApplicationContext apc=<span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"applicationContext.xml"</span>);</span><br><span class="line">        AfterReturningAdviceAOP afterReturningAdviceAOP = apc.getBean(<span class="string">"afterReturningAdviceAOP"</span>, AfterReturningAdviceAOP<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        afterReturningAdviceAOP.afterReturningMethod();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">m4</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//首先获取上下文对象，spring里面声明的对象都需要通过上下文获取</span></span><br><span class="line">        ApplicationContext apc=<span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"applicationContext.xml"</span>);</span><br><span class="line">        AfterthrowingAdviceAOP afterthrowingAdviceAOP = apc.getBean(<span class="string">"afterthrowingAdviceAOP"</span>, AfterthrowingAdviceAOP<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        afterthrowingAdviceAOP.afterthrowMethod();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="注：-SpringAOP顺序"><a href="#注：-SpringAOP顺序" class="headerlink" title="注：(SpringAOP顺序)"></a>注：(SpringAOP顺序)</h2><ul>
+<li>设置自动代理</li>
+<li>扫描包（通过context）</li>
+<li>写建议（Advice）<ul>
+<li>@Aspect</li>
+<li>@Component</li>
+</ul>
+</li>
+<li>写要切的类及其要切的方法（AdviceAOP）<ul>
+<li>@Component</li>
+</ul>
+</li>
+<li>测试即可。</li>
+<li>想要同类型建议按顺序执行<ul>
+<li>写多个建议，每个建议中写@Order(num)注解</li>
+<li>执行顺序<ul>
+<li>Before(从1-2-3顺序执行)<ul>
+<li>@Order(1)</li>
+<li>@Order(2)</li>
+<li>@Order(3)</li>
+</ul>
+</li>
+<li>After(从3-2-1顺序执行)<ul>
+<li>@Order(3)</li>
+<li>@Order(2)</li>
+<li>@Order(1)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/WeChatPay.png" alt="SnowyLChen 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/AliPay.png" alt="SnowyLChen 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ssm/" rel="tag"># ssm</a>
+          
+            <a href="/tags/Spring/" rel="tag"># Spring</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/03/%E7%BC%93%E5%AD%98/" rel="next" title="二级缓存">
+                <i class="fa fa-chevron-left"></i> 二级缓存
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/03/java%E6%95%B0%E6%8D%AEExcel%E8%A1%A8%E6%A0%BC%E4%BA%92%E8%BD%AC/" rel="prev" title="java数据与Excel表格的互转">
+                java数据与Excel表格的互转 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NzM2Mi8yMzg2Mg=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="SnowyLChen" />
+            
+              <p class="site-author-name" itemprop="name">SnowyLChen</p>
+              <p class="site-description motion-element" itemprop="description">学无止境</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/SnowyLChen" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="15293616670@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-globe"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、步骤："><span class="nav-number">1.</span> <span class="nav-text">一、步骤：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-添加依赖："><span class="nav-number">1.1.</span> <span class="nav-text">1.添加依赖：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-配置文件"><span class="nav-number">1.2.</span> <span class="nav-text">2.配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-类"><span class="nav-number">1.3.</span> <span class="nav-text">3.类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-测试类"><span class="nav-number">1.4.</span> <span class="nav-text">4.测试类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-结果"><span class="nav-number">1.5.</span> <span class="nav-text">5.结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-总结"><span class="nav-number">1.6.</span> <span class="nav-text">6.总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、值的注入"><span class="nav-number">2.</span> <span class="nav-text">二、值的注入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-值的注入"><span class="nav-number">2.1.</span> <span class="nav-text">1.值的注入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-bean元素探讨"><span class="nav-number">2.2.</span> <span class="nav-text">2.bean元素探讨</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-自动注入"><span class="nav-number">2.3.</span> <span class="nav-text">4.自动注入</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、常用注解"><span class="nav-number">3.</span> <span class="nav-text">三、常用注解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、零散的知识点"><span class="nav-number">4.</span> <span class="nav-text">四、零散的知识点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、SpringAOP（面向切面编程）"><span class="nav-number">5.</span> <span class="nav-text">五、SpringAOP（面向切面编程）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-xml版"><span class="nav-number">5.1.</span> <span class="nav-text">1.xml版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-注解版"><span class="nav-number">5.2.</span> <span class="nav-text">2.注解版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-在applicationContext-xml中"><span class="nav-number">5.2.1.</span> <span class="nav-text">(1) 在applicationContext.xml中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-在advice中"><span class="nav-number">5.2.2.</span> <span class="nav-text">(2) 在advice中</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-gt-BeforeAdvice"><span class="nav-number">5.2.2.1.</span> <span class="nav-text">1&gt; BeforeAdvice</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-gt-AfterAdvice"><span class="nav-number">5.2.2.2.</span> <span class="nav-text">2&gt; AfterAdvice</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-gt-AfterReturnning"><span class="nav-number">5.2.2.3.</span> <span class="nav-text">3&gt; AfterReturnning</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-gt-AfterThrowing"><span class="nav-number">5.2.2.4.</span> <span class="nav-text">4&gt; AfterThrowing</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-在Service中"><span class="nav-number">5.2.3.</span> <span class="nav-text">(3) 在Service中</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-gt-BeforeAdviceAOP"><span class="nav-number">5.2.3.1.</span> <span class="nav-text">1&gt; BeforeAdviceAOP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-gt-AfterAdviceAOP"><span class="nav-number">5.2.3.2.</span> <span class="nav-text">2&gt; AfterAdviceAOP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-gt-AfterReturningAdviceAOP"><span class="nav-number">5.2.3.3.</span> <span class="nav-text">3&gt; AfterReturningAdviceAOP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-gt-AfterthrowingAdviceAOP"><span class="nav-number">5.2.3.4.</span> <span class="nav-text">4&gt; AfterthrowingAdviceAOP</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-测试类-1"><span class="nav-number">5.2.4.</span> <span class="nav-text">(4) 测试类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注：-SpringAOP顺序"><span class="nav-number">5.3.</span> <span class="nav-text">注：(SpringAOP顺序)</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SnowyLChen</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("zQV8h20mC52dlrNg8nTSckv9-gzGzoHsz", "cwHSUvCUoVjwStbsxNRp4HCN");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+<script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>
